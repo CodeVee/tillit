@@ -3,6 +3,7 @@
   --secondary-color: yellow;
   --light-color: #fdfdfd;
   --grey-color: #f0f0f0;
+  --fade-dark-color: #868686;
   --dark-color: #333;
 }
 
@@ -26,6 +27,8 @@ body, html {
   a {
     color: var(--dark-color);
     text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
   }
   
   ul {
@@ -51,8 +54,8 @@ body, html {
   }
   
   .inner-container {
-    width: 100rem;
-    margin: auto;
+    width: 92rem;
+    margin: 0 4rem;
   }
 
   .wrapper {
@@ -71,15 +74,16 @@ body, html {
     border-top-right-radius: 1rem;
     background-color: var(--light-color);
     color: var(--dark-color);
-    -webkit-box-shadow: 0px 4px 18px -4px rgba(51,51,51,1);
-    -moz-box-shadow: 0px 4px 18px -4px rgba(51,51,51,1);
-    box-shadow: 0px 4px 18px -4px rgba(51,51,51,1);
+    -webkit-box-shadow: 0px 3px 20px -10px rgba(51,51,51,1);
+    -moz-box-shadow: 0px 3px 20px -10px rgba(51,51,51,1);
+    box-shadow: 0px 3px 20px -10px rgba(51,51,51,1);
+    z-index: 1;
   }
 
   #nav .nav-container {
-    width: 100rem;
+    width: 94rem;
     height: 6rem;
-    margin: 2rem 0 0 14rem;
+    margin: 2rem auto;
     display: flex;
   }
 
@@ -99,12 +103,7 @@ body, html {
     justify-content: space-between;
     align-items: center;
   }
-
-  #nav .nav-container ul li a {
-    font-size: 1.3rem;
-    font-weight: bold;
-  }
-
+  
   #nav .nav-container .active {
     color: var(--primary-color);
   }
@@ -123,8 +122,46 @@ body, html {
 
   #aside {
     grid-area: aside;
+    background-color: var(--light-color);
+    -webkit-box-shadow: 0px 3px 20px -10px rgba(51,51,51,1);
+    -moz-box-shadow: 0px 3px 20px -10px rgba(51,51,51,1);
+    box-shadow: 0px 3px 20px -10px rgba(51,51,51,1);
+    border-bottom-left-radius: 1rem;
   }
 
   #main {
     grid-area: main;
+    background-color: var(--grey-color);
+    border-bottom-right-radius: 1rem;
+  }
+
+  #main #navbar {
+    background-color: #f8f8f8;
+  }
+
+  #main #navbar .inner-container {
+    display: flex;
+  }
+
+  #main #navbar .inner-container ul {
+    flex: 1;
+    display: flex;
+  }
+
+  #main #navbar .inner-container ul li {
+    padding: 2.5rem 7rem;
+  }
+
+  #main #navbar .inner-container ul li:first-child {
+    border-bottom: 3px solid var(--primary-color);
+  }
+
+  #main #navbar .inner-container ul li:not(:first-child) a {
+    color: var(--fade-dark-color);
+  }
+
+  #main #navbar i {
+    font-size: 1.5rem;
+    align-self: center;
+    color: var(--fade-dark-color);
   }
