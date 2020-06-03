@@ -261,4 +261,88 @@ p {
   color: var(--dark-color);
 }
 
+.fade {
+  color: var(--fade-dark-color);
+}
+
+.green {
+  color: lawngreen;
+}
+
+.orange {
+  color: var(--primary-color);
+}
+
+#main #main-chart .box .box-3 .box-body {
+  margin-top: 2rem;
+  display: flex;
+}
+
+#main #main-chart .box .box-3 .box-body .bi {
+  flex-basis: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--fade-dark-color);
+}
+
+#main #main-chart .box .box-3 .box-body .bx {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.bx-t {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.bx-t {
+  border-bottom: 1px solid var(--grey-color);
+}
+
+.bx-tx {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+
+.t1 h5, .t3 h5, .bx-b h5 {
+  font-size: 1.3rem;
+}
+
+.t1 h5 span, .t3 h5 span, .bx-b h5 span {
+  font-size: 2rem;
+}
+
+.t2 {
+  /* text-align: center; */
+}
+
+.t2 small, .bx-b small {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.t2 > i {
+  font-size: 3rem;
+}
+
+.t3 h5 i {
+  font-size: 1.2rem;
+}
+
+.bx-b {
+  display: flex;
+  padding: 2rem 1rem 0 1rem;
+}
+
+.bx-b > * {
+  flex-basis: 33%;
+}
+
 
