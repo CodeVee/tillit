@@ -318,14 +318,11 @@ p {
   font-size: 2rem;
 }
 
-.t2 {
-  /* text-align: center; */
-}
-
 .t2 small, .bx-b small {
   font-size: 1rem;
   display: flex;
   align-items: center;
+  font-weight: bold;
 }
 
 .t2 > i {
@@ -339,10 +336,11 @@ p {
 .bx-b {
   display: flex;
   padding: 2rem 1rem 0 1rem;
+  justify-content: space-between;
 }
 
 .bx-b > * {
-  flex-basis: 33%;
+  flex-basis: 31%;
 }
 
 
