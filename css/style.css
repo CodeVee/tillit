@@ -396,9 +396,6 @@ p {
   grid-gap: 3rem;
 }
 
-#main #compare .compare-boxes .boxes .c-box {
-}
-
 #main #compare .compare-boxes .boxes .c-box header {
   background: #ffc865;
   color: var(--light-color);
