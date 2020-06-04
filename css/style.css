@@ -22,7 +22,7 @@ html {
 
 body {
   background: url("../img/site_bg.png") no-repeat top center/cover;
-  min-height: 120rem;
+  min-height: 140rem;
 }
 
 a {
@@ -45,7 +45,7 @@ p {
   margin: 5rem auto;
   padding: 2rem 5rem;
   overflow: hidden;
-  min-height: 100rem;
+  min-height: 120rem;
 }
 
 .inner-container {
@@ -165,12 +165,12 @@ p {
   margin-top: 4rem;
 }
 
-#main #main-chart .chart-header {
+.chart-header {
   display: flex;
   justify-content: space-between;
 }
 
-#main #main-chart .chart-header h2 {
+.chart-header h2 {
   font-size: 2.2rem;
 }
 
@@ -299,7 +299,7 @@ p {
   padding: 1rem;
 }
 
-.bx-t {
+#main #main-chart .box .box-3 .box-body .bx .bx-t {
   border-bottom: 1px solid var(--grey-color);
 }
 
@@ -308,6 +308,7 @@ p {
   flex-direction: column;
   justify-content: space-around;
   padding: 0 1rem;
+  text-align: center;
 }
 
 .t1 h5, .t3 h5, .bx-b h5 {
@@ -325,12 +326,16 @@ p {
   font-weight: bold;
 }
 
+.t2 small i, .bx-b small i {
+  font-size: 1.2rem;
+}
+
 .t2 > i {
   font-size: 3rem;
 }
 
 .t3 h5 i {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .bx-b {
@@ -340,7 +345,75 @@ p {
 }
 
 .bx-b > * {
-  flex-basis: 31%;
+  text-align: left;
 }
 
+.bx-b h5:first-child {
+  flex-basis: 36%;
+}
+
+.bx-b small {
+  flex-basis: 26%;
+}
+
+.bx-b h5:last-child {
+  flex: 1;
+  text-align: center;
+}
+
+
+#main #compare {
+  margin-top: 2rem;
+}
+
+#main #compare .compare-boxes {
+  margin-top: 2rem;
+  background: var(--light-color);
+  min-height: 10rem;
+  padding: 1.5rem;
+}
+
+#main #compare .compare-boxes .info {
+  display: flex;
+  align-items: center;
+}
+
+#main #compare .compare-boxes .info h5,
+#main #compare .compare-boxes .info i:last-child {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+
+#main #compare .compare-boxes .info small {
+  margin-left: auto;
+}
+
+#main #compare .compare-boxes .boxes {
+  height: 15rem;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+}
+
+#main #compare .compare-boxes .boxes .c-box {
+}
+
+#main #compare .compare-boxes .boxes .c-box header {
+  background: #ffc865;
+  color: var(--light-color);
+  height: 4rem;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main #compare .compare-boxes .boxes .c-box .bx-t {
+  padding: 2rem 2rem 2rem 5rem;
+}
+
+#main #compare .compare-boxes .boxes .c-box .bx-t .t2 {
+  text-align: center;
+}
 
