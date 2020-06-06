@@ -63,4 +63,8 @@ body {
     flex-direction: column;
     height: 10rem;
   }
+
+  #aside {
+    display: none;
+  }
   
