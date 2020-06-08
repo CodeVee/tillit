@@ -13,14 +13,42 @@ var myChart = new Chart(ctx, {
     data: {
         labels: [...formatLables(data)],
         datasets: [{
+            label: 'Open',
+            backgroundColor: "orange",
+            borderColor: "lightgreen",
+            data: [
+                ...formatOpeningValues(data)
+            ],
+            fill: false,
+        },
+        {
             label: 'High',
             backgroundColor: "green",
             borderColor: "orange",
             data: [
-                ...formatValues(data)
+                ...formatHighValues(data)
             ],
             fill: false,
-        }]
+        },
+        {
+            label: 'Low',
+            backgroundColor: "blue",
+            borderColor: "brown",
+            data: [
+                ...formatLowValues(data)
+            ],
+            fill: false,
+        },
+        {
+            label: 'Close',
+            backgroundColor: "yellow",
+            borderColor: "blue",
+            data: [
+                ...formatClosingValues(data)
+            ],
+            fill: false,
+        }
+    ]
     },
     options: {
         responsive: true,
@@ -56,10 +84,26 @@ var myChart = new Chart(ctx, {
 });
 });
 
-function formatValues(chartData) {
+function formatOpeningValues(chartData) {
+    let formatedData = chartData.map(({ Open }) => (Open))
+    return formatedData
+}
+
+function formatHighValues(chartData) {
     let formatedData = chartData.map(({ High }) => (High))
     return formatedData
 }
+
+function formatLowValues(chartData) {
+    let formatedData = chartData.map(({ Low }) => (Low))
+    return formatedData
+}
+
+function formatClosingValues(chartData) {
+    let formatedData = chartData.map(({ Close }) => (Close))
+    return formatedData
+}
+
 
 function formatLables(chartData) {
     let formatedData = chartData.map(({ Date }) => (Date))
