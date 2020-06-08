@@ -67,4 +67,14 @@ body {
   #aside {
     display: none;
   }
+
+  #main {
+    border-bottom-right-radius: 0;
+    width: 100vw;
+  }
+  
+  
+  #main #navbar .inner-container {
+    overflow-x: scroll;
+  }
   
