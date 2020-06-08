@@ -72,9 +72,119 @@ body {
     border-bottom-right-radius: 0;
     width: 100vw;
   }
-  
-  
+
   #main #navbar .inner-container {
     overflow-x: scroll;
   }
   
+  #main #main-chart .chart-header .heading-icons i {
+    font-size: 3rem;
+  }
+  
+  #main #main-chart .box {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0;
+  }
+  
+  .box-1, .box-2, .box-3 {
+    width: 95%;
+  }
+  
+  .header small {
+    font-size: .8rem;
+    padding: .3rem 1.3rem;
+    border-radius: 1rem;
+  }
+  
+  
+  #main #main-chart .box .box-2 .box-body {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+  }
+
+  #main #main-chart .box .box-2 .box-body > div {
+    flex-basis: 50%;
+  }
+  
+  #main #main-chart .box .box-2 .box-body .box-pricing {
+    justify-content: center;
+  }
+
+  #main #main-chart .box .box-2 .box-body .box-pricing i {
+    margin: 0;
+  }
+
+  .bx-b {
+    padding-right: 2.5rem;
+  }
+  
+  .bx-b > * {
+    text-align: initial;
+  }
+  
+  .bx-b h5:first-child {
+    flex-basis: 33%;
+  }
+  
+  .bx-b small {
+    flex-basis: 31.5%;
+    justify-content: center;
+  }
+  
+  .bx-b h5:last-child {
+    text-align: end;
+  }
+
+  @media only screen and (max-width: 500px) {
+
+    .inner-container {
+      margin: 0 1rem;
+    }
+
+    #main #main-chart .chart-header {
+      flex-wrap: wrap;
+    }
+    
+    #main #main-chart .chart-header h2 {
+      margin-bottom: 1rem;
+    }
+
+    #main #main-chart .bx-t {
+      flex-wrap: wrap;
+    }
+
+    #main #main-chart .box .box-3 .box-body .bx .bx-t .bx-tx {
+      justify-content: space-between;
+      padding: .3rem;
+    }
+
+    #main #main-chart .t2, .bx-b small {
+      order: -1;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .bx-b {
+      padding-right: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .bx-b > * {
+      text-align: initial;
+    }
+    
+    .bx-b h5:first-child {
+      flex-basis: 50%;
+    }
+    
+    .bx-b small {
+      flex-basis: 100%;
+      justify-content: center;
+    }
+  }
