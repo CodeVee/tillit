@@ -2,10 +2,6 @@ body {
     background: none;
     min-height: 0;
   }
-  
-  a {
-    font-size: 1.3rem;
-  }
 
   .outer-container {
     margin: auto;
@@ -28,7 +24,27 @@ body {
       "aside";
   }
 
+  #nav {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  #nav a {
+    font-size: 1.1rem;
+  }
   
+  #nav .nav-container {
+    width: auto;
+    margin: 1rem auto;
+  }
+  
+  #nav .nav-container ul {
+    padding: 0 1rem;
+  }
+  
+  #nav .nav-container .btn {
+    padding: 0.7rem 3rem;
+  }
 
   #aside {
     display: none;
@@ -126,17 +142,12 @@ body {
     }
 
     #nav {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-      width: 100vw;
       padding-bottom: 4rem;
     }
     
     #nav .nav-container {
-      width: auto;
       height: 35rem;
       margin: auto;
-      display: flex;
       flex-direction: column;
       text-align: center;
       
@@ -152,10 +163,7 @@ body {
     }
     
     #nav .nav-container ul {
-      padding-left: 3rem;
-      display: flex;
-      flex: 1;
-      justify-content: space-between;
+      padding: 0;
       flex-direction: column;
       height: 10rem;
     }
