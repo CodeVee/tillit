@@ -41,6 +41,18 @@ p {
   margin: 0.5rem 0;
 }
 
+.fade {
+  color: var(--fade-dark-color);
+}
+
+.green {
+  color: lawngreen;
+}
+
+.orange {
+  color: var(--primary-color);
+}
+
 .outer-container {
   max-width: 128rem;
   margin: 5rem auto;
@@ -217,7 +229,9 @@ p {
   grid-template-rows: 1fr 2fr;
 }
 
-.box-1, .box-2, .box-3 {
+.box-1,
+.box-2,
+.box-3 {
   background-color: var(--light-color);
   border-radius: 1rem;
   padding: 1.5rem;
@@ -239,7 +253,7 @@ p {
 .header small {
   background-color: var(--primary-color);
   font-size: 1rem;
-  padding: .3rem 1.5rem;
+  padding: 0.3rem 1.5rem;
   border-radius: 2rem;
   color: var(--light-color);
 }
@@ -280,18 +294,6 @@ p {
   color: var(--dark-color);
 }
 
-.fade {
-  color: var(--fade-dark-color);
-}
-
-.green {
-  color: lawngreen;
-}
-
-.orange {
-  color: var(--primary-color);
-}
-
 #main #main-chart .box .box-3 .box-body {
   margin-top: 2rem;
   display: flex;
@@ -330,22 +332,28 @@ p {
   text-align: center;
 }
 
-.t1 h5, .t3 h5, .bx-b h5 {
+.t1 h5,
+.t3 h5,
+.bx-b h5 {
   font-size: 1.3rem;
 }
 
-.t1 h5 span, .t3 h5 span, .bx-b h5 span {
+.t1 h5 span,
+.t3 h5 span,
+.bx-b h5 span {
   font-size: 2rem;
 }
 
-.t2 small, .bx-b small {
+.t2 small,
+.bx-b small {
   font-size: 1rem;
   display: flex;
   align-items: center;
   font-weight: bold;
 }
 
-.t2 small i, .bx-b small i {
+.t2 small i,
+.bx-b small i {
   font-size: 1.2rem;
 }
 
@@ -431,4 +439,3 @@ p {
 #main #compare .compare-boxes .boxes .c-box .bx-t .t2 {
   text-align: center;
 }
-
