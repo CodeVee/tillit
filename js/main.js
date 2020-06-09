@@ -1,4 +1,4 @@
-$.getJSON("../data/price_historicals.json", function (json) {}).done(function (json) {
+$.getJSON("https://price.free.beeceptor.com/my/api/path", function (json) {}).done(function (json) {
   var data = json.slice(0, 10);
   data = data.map((item) => {
     item.Date = item.Date.slice(12, 16);
