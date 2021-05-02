@@ -1,5 +1,5 @@
 const chartFn = async () => {
-  const jsonData = await fetch('../data/price_historicals.json');
+  const jsonData = await fetch('./data/price_historicals.json');
   const records = await jsonData.json();
   const topRecords = records.slice(0, 10);
   const chartData = topRecords.map(item => {
