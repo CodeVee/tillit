@@ -1,41 +1,44 @@
-$.getJSON("../data/price_historicals.json", function (json) {}).done(function (json) {
-  var data = json.slice(0, 10);
-  data = data.map((item) => {
+const chartFn = async () => {
+  const jsonData = await fetch('../data/price_historicals.json');
+  const records = await jsonData.json();
+  const topRecords = records.slice(0, 10);
+  const chartData = topRecords.map(item => {
     item.Date = item.Date.slice(12, 16);
     return item;
   });
-  var ctx = document.getElementById("myChart");
-  var myChart = new Chart(ctx, {
+
+  const context = document.getElementById("myChart");
+  new Chart(context, {
     type: "line",
     data: {
-      labels: [...formatLables(data)],
+      labels: chartData.map(({ Date }) => Date),
       datasets: [
         {
           label: "Open",
           backgroundColor: "white",
           borderColor: "lightgreen",
-          data: [...formatOpeningValues(data)],
+          data: chartData.map(({ Open }) => Open),
           fill: false,
         },
         {
           label: "High",
           backgroundColor: "white",
           borderColor: "yellowgreen",
-          data: [...formatHighValues(data)],
+          data: chartData.map(({ High }) => High),
           fill: false,
         },
         {
           label: "Low",
           backgroundColor: "white",
           borderColor: "orange",
-          data: [...formatLowValues(data)],
+          data: chartData.map(({ Low }) => Low),
           fill: false,
         },
         {
           label: "Close",
           backgroundColor: "white",
           borderColor: "cyan",
-          data: [...formatClosingValues(data)],
+          data: chartData.map(({ Close }) => Close),
           fill: false,
         },
       ],
@@ -72,29 +75,6 @@ $.getJSON("../data/price_historicals.json", function (json) {}).done(function (j
       },
     },
   });
-});
-
-function formatOpeningValues(chartData) {
-  let formatedData = chartData.map(({ Open }) => Open);
-  return formatedData;
 }
 
-function formatHighValues(chartData) {
-  let formatedData = chartData.map(({ High }) => High);
-  return formatedData;
-}
-
-function formatLowValues(chartData) {
-  let formatedData = chartData.map(({ Low }) => Low);
-  return formatedData;
-}
-
-function formatClosingValues(chartData) {
-  let formatedData = chartData.map(({ Close }) => Close);
-  return formatedData;
-}
-
-function formatLables(chartData) {
-  let formatedData = chartData.map(({ Date }) => Date);
-  return formatedData;
-}
+chartFn()
